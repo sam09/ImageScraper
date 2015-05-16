@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = ImageScraper::VERSION
   spec.authors       = ["Sam Radhakrishnan"]
   spec.email         = ["sk09idm@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{A gem to download images from url}
+  spec.description   = %q{A gem to download all the images at a particular URL}
+  spec.homepage      = "https://github.com/sam09/ImageScraper"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,4 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "open-uri"
+  spec.add_development_dependency "nokogiri"
+  spec.add_development_dependency "rubygems"
 end
