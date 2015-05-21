@@ -57,7 +57,7 @@ module ImageScraper
 	end
 
 	#A method to download all files at a given url
-	def self.Scrape()
+	def self.Scrap()
 		self.getPage
 		self.getImgNames
 		self.getImgLinks
