@@ -21,13 +21,17 @@ Or install it yourself as:
 ## Usage
 
 * Use the gem in your scrpit by adding the following line in your code
+
      `require 'ImageScraper'`
 
 * Initialize a Scraper Object as
+
     `ImageScraper.initialize(url)`
 
 * To download all images
+
     `ImageScraper.Scrap`
+
 ## Contributing
 
 1. Fork it ( https://github.com/sam09/ImageScraper/fork )
