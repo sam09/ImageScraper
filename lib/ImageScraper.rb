@@ -6,9 +6,6 @@ module ImageScraper
 	
 	#The constructor
 	def self.initialize(url, folder = "Images")
-		if url[url.length] != "/"
-			url += "/"
-		end
 		@url = url
 		@folder = folder
 	end
@@ -18,10 +15,25 @@ module ImageScraper
 		@page = Nokogiri::HTML(open(@url).read)
 	end
 
-	#a method to get image links
+
+	def self.getNewUrl()
+		new_url = /([a-z0-9]|_)+.(html)|(php)$/.match(@url)
+		puts new_url.to_s
+		n = new_url.to_s
+		return @url.slice! n
+	end
+
+	#A method to get image links
 	def self.getImgLinks()
 		img = @page.css('img')
 		@imgLinks = Array.new
+
+		new_url = self.getNewUrl()
+		
+		if @url[@url.length-1] != '/'
+			@url += "/"
+		end
+		print new_url
 
 		img.each do |i|
 			@imgLinks.push(@url+i["src"])
@@ -59,6 +71,7 @@ module ImageScraper
 	#A method to download all files at a given url
 	def self.Scrap()
 		self.getPage
+		puts "Page Found"
 		self.getImgNames
 		self.getImgLinks
 		self.download
