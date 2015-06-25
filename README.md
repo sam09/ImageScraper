@@ -24,6 +24,7 @@ Or install it yourself as:
 
      `require 'ImageScraper'`
 * Download all images by 
+     
      `ImageScraper.getAllImages(url)`
 
 ## Contributing
