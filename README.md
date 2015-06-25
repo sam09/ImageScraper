@@ -23,9 +23,9 @@ Or install it yourself as:
 * Use the gem in your scrpit by adding the following line in your code
 
      `require 'ImageScraper'`
-* Download all images by 
+* To download all images at a given url
      
-     `ImageScraper.getAllImages(url)`
+     `ImageScraper.get_all_images(url)`
 
 ## Contributing
 
