@@ -29,7 +29,7 @@ module ImageScraper
     def get_img_links()
       img = @page.css('img')
       @imgLinks = Array.new
-      new_url = self.getNewUrl()
+      new_url = self.get_new_url()
 		
       if @url[@url.length-1] != '/'
         @url += "/"
